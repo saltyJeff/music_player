@@ -53,7 +53,7 @@ public class SongNode extends AVLNode<SongNode> {
     }
 	private static String stripEnd(String stripTo, String original) {
 		int stripEnd = original.lastIndexOf(stripTo);
-		if(stripEnd != -1 && stripEnd < original.length() - 2E) {
+		if(stripEnd != -1 && stripEnd < original.length() - 2) {
 			original = original.substring(0, stripEnd);
 		}
 		return original;
