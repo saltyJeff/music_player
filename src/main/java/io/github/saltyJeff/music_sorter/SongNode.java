@@ -33,6 +33,7 @@ public class SongNode extends AVLNode<SongNode> {
 	    s = stripEnd(" [", s);
 		s = stripEnd(" (", s);
 
+		System.out.println("\t"+s);
 	    List<Character> chars = s.chars()
 			    .mapToObj(e -> (char) e)
 			    .filter(e -> Character.isAlphabetic(e) || Character.isDigit(e))
@@ -46,17 +47,19 @@ public class SongNode extends AVLNode<SongNode> {
     }
     private static String stripStart(String stripFrom, String original) {
     	int stripStart = original.indexOf(stripFrom);
+    	String ret = original;
     	if(stripStart != -1 && stripStart > 2) {
-    		original = original.substring(stripStart+stripFrom.length());
+            ret = original.substring(stripStart+stripFrom.length());
 	    }
-	    return original;
+        return ret.length() > 6 ? ret : original;
     }
 	private static String stripEnd(String stripTo, String original) {
 		int stripEnd = original.lastIndexOf(stripTo);
+		String ret = original;
 		if(stripEnd != -1 && stripEnd < original.length() - 2) {
-			original = original.substring(0, stripEnd);
+			ret = original.substring(0, stripEnd);
 		}
-		return original;
+		return ret.length() > 6 ? ret : original;
 	}
     @Override
     public int compareTo(SongNode o) {

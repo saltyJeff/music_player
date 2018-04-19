@@ -24,6 +24,6 @@ repositories {
     }
 }
 dependencies {
-    compile 'com.github.TeamNewPipe:NewPipeExtractor:v0.11.5'
+    compile 'com.github.TeamNewPipe:NewPipeExtractor:-SNAPSHOT'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

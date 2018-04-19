@@ -8,8 +8,8 @@ public class Main {
         MusicManager man = new MusicManager();
         Scanner input = new Scanner(System.in);
         try {
-            man.createTree("https://www.youtube.com/playlist?list=PLRxnRcsf4RfGeBxzIbxgCG1Dbswbp0qLw");
-            System.out.println("\n\nWelcome to the Red Velvet Song Searcher\n");
+            man.createTree("<INSERT URL HERE>");
+            System.out.println("\n\nWelcome to the YT Song Searcher\n");
             System.out.println("Type . to leave");
             while(true) {
 	            System.out.println("Enter a search term:");
